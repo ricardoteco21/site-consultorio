@@ -1,0 +1,268 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #0077b6;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.6rem;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #caf0f8;
+}
+
+/* ===== HERO ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  background: #f0f8ff;
+}
+
+.hero-text {
+  max-width: 500px;
+  text-align: center;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  color: #0077b6;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.hero .botao {
+  display: inline-block;
+  background: #0077b6;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero .botao:hover {
+  background: #023e8a;
+}
+
+.hero img {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* ===== SOBRE ===== */
+.sobre {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+}
+
+.sobre img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.sobre h2 {
+  color: #0077b6;
+  margin: 20px 0 10px;
+}
+
+.sobre p {
+  max-width: 500px;
+  text-align: center;
+}
+
+/* ===== SERVIÇOS ===== */
+.servicos {
+  background: #e9f5ff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.servico-lista {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.servico {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.servico h3 {
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+/* ===== DEPOIMENTOS ===== */
+.depoimentos {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.depoimento-lista {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.depoimento {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  font-style: italic;
+}
+
+.depoimento span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #0077b6;
+}
+
+/* ===== CONTATO ===== */
+.contato {
+  background: #f0f8ff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contato form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contato input,
+.contato textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.contato button {
+  background: #0077b6;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contato button:hover {
+  background: #023e8a;
+}
+
+/* ===== WHATSAPP FIXO ===== */
+.whatsapp-fixo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  font-size: 24px;
+  padding: 12px 18px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  background: #0077b6;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .servico-lista,
+  .depoimento-lista {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servico, .depoimento {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .contato form {
+    width: 100%;
+  }
+}
